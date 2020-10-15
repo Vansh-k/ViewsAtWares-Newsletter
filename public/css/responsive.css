@@ -1,0 +1,23 @@
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 85%;
+  }
+  h1{
+    font-size: 2rem;
+  }
+  .form{
+    width:90%;  padding: 8%;
+  }
+  .main{
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .form{
+    width:60%;
+      padding: 5%;
+  }
+  .main{
+    width: 70%;
+  }
+}

@@ -54,8 +54,3 @@ app.post("/",function(req,res){
 app.listen(process.env.PORT || 3000 ,function(){
   console.log("server started at port 3000");
 });
-
-
-// f17d939563c8f31a11024473e795a6ba-us4
-
-// 10b1c2b302
