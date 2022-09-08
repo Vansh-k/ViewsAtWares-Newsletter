@@ -33,10 +33,10 @@ app.post("/", function (req, res) {
   var jsonData = JSON.stringify(data);
 
   var options = {
-    url: "https://us4.api.mailchimp.com/3.0/lists/10b1c2b302",
+    url: "https://us17.api.mailchimp.com/3.0/lists/cbee918f46",
     method: "POST",
     headers: {
-      Authorization: "VanshK 47aaa5e1301ac0315c30b4bbd8fb809a-us4",
+      Authorization: "VanshK de6e096a047ec325986c5594134576af-us17",
     },
     body: jsonData,
   };
@@ -44,8 +44,10 @@ app.post("/", function (req, res) {
   request(options, function (error, response, body) {
     if (response.statusCode == 200) {
       res.sendFile(__dirname + "/success.html");
+      console.log(response);
     } else {
       res.sendFile(__dirname + "/failure.html");
+      console.log(error);
     }
   });
 });
@@ -54,3 +56,4 @@ app.post("/", function (req, res) {
 app.listen(process.env.PORT || 3000, function () {
   console.log("server started at port 3000");
 });
+// de6e096a047ec325986c5594134576af-us17
