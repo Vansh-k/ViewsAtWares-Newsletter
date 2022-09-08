@@ -1,5 +1,5 @@
 //jshint esversion:6
-require("dotenv").config;
+require("dotenv").config();
 const express = require("express");
 const request = require("request");
 const bodyParser = require("body-parser");
@@ -31,12 +31,12 @@ app.post("/", function (req, res) {
   };
 
   var jsonData = JSON.stringify(data);
-
+  console.log(process.env.SECRET_KEY);
   var options = {
     url: "https://us17.api.mailchimp.com/3.0/lists/cbee918f46",
     method: "POST",
     headers: {
-      Authorization: "VanshK de6e096a047ec325986c5594134576af-us17",
+      Authorization: "VanshK " + process.env.SECRET_KEY,
     },
     body: jsonData,
   };
